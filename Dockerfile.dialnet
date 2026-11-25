@@ -1,6 +1,6 @@
 # Dialnet build of Anubis (the "dialnet" theme: static/dialnet + templates). Upstream publishes with ko from GitHub
 # Actions; this reproduces the same assets pipeline (templ, wasm, esbuild, postcss) in one builder.
-#   docker build -f Dockerfile.dialnet --build-arg VERSION=v1.28.2-dialnet.1 -t dialnet-registry.unirioja.es/dialnet/anubis:v1.28.2-dialnet.1 .
+#   docker build -f Dockerfile.dialnet --build-arg VERSION=v1.28.2-dialnet.1 -t dialnet-registry.unirioja.es/infra/anubis:v1.28.2-dialnet.1 .
 FROM golang:1.27-bookworm AS build
 RUN apt-get update && apt-get install -y --no-install-recommends brotli zstd xz-utils ca-certificates curl \
     && rm -rf /var/lib/apt/lists/*
