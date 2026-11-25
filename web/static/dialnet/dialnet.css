@@ -1,0 +1,146 @@
+/* Dialnet theme for the Anubis challenge page.
+   Tokens, fonts and layout come from dialnet-auth (infra/dialnet-auth, platform/themes/dialnet-auth/login), so the
+   challenge reads as the same family as the sign-in. Fonts are OFL-1.1; licences next to the files. */
+
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-display: swap; font-weight: 200 800;
+  src: url("fonts/plus-jakarta-sans-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Plus Jakarta Sans"; font-style: normal; font-display: swap; font-weight: 200 800;
+  src: url("fonts/plus-jakarta-sans-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("fonts/inter-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("fonts/inter-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+:root {
+  --da-paper: #fff; --da-canvas: #fafafa; --da-ink: #171717; --da-muted: #666; --da-line: #ebebeb; --da-line-strong: #d6d6d6;
+  --da-accent: #990000; --da-primary: var(--da-ink); --da-primary-hover: #383838;
+  --da-danger: #c0271d; --da-success: #1e6b3a;
+  --da-font-text: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --da-font-display: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --da-radius: 6px; --da-column: 22rem; --da-control: 2.625rem;
+  color-scheme: light;
+}
+/* each portal: its accent (logo colour, progress, book covers); the same values as dialnet-auth */
+body[data-portal="agora"]    { --da-accent: #0868b0; }
+body[data-portal="documat"]  { --da-accent: #004878; }
+body[data-portal="hispadoc"] { --da-accent: #a01830; }
+body[data-portal="docuvin"]  { --da-accent: #600078; }
+
+html { background: var(--da-canvas); }
+body { margin: 0; background: var(--da-canvas); color: var(--da-ink); font: 400 1rem/1.5 var(--da-font-text);
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+.da-page { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-rows: 1fr auto; }
+.da-main { display: flex; justify-content: center; padding: clamp(1.5rem, 9vh, 6rem) 1.25rem 3rem; }
+.da-column { width: 100%; max-width: var(--da-column); text-align: center; }
+.da-logo { display: block; width: fit-content; margin: 0 auto 2rem; }
+.da-logo img { display: block; height: 3.5rem; width: auto; }
+h1#title { font: 650 2rem/1.15 var(--da-font-display); letter-spacing: -0.025em; margin: 0 0 1.5rem; text-wrap: balance; }
+.da-lead { color: var(--da-muted); font-size: .9375rem; margin: 0 0 1.75rem; }
+a { color: var(--da-ink); }
+code, pre { font: .875rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; }
+
+/* Anubis' own status line (difficulty and speed) stays for screen readers; ours is the visible one */
+#status { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+#progress:not(.da-continue) { display: none !important; }
+#image { display: none; }
+.da-status { display: flex; justify-content: center; align-items: center; gap: .4rem; color: var(--da-muted); font-size: .875rem; margin: 0; min-height: 1.5rem; }
+.da-status svg { flex: none; }
+details { margin-top: 2rem; border-top: 1px solid var(--da-line); padding-top: 1rem; font-size: .875rem; color: var(--da-muted); text-align: left; }
+details summary { cursor: pointer; color: var(--da-ink); text-align: center; }
+details p { margin: .5rem 0 0; }
+.da-continue, .da-steps button { display: flex; align-items: center; justify-content: center; width: 100%; min-height: var(--da-control); margin-top: 1rem;
+  border: 0; border-radius: var(--da-radius); background: var(--da-primary); color: #fff; font: 600 .9375rem var(--da-font-text); cursor: pointer; }
+.da-continue:hover, .da-steps button:hover { background: var(--da-primary-hover); }
+.da-steps { margin: 1rem 0 0; padding: 1rem 1.25rem; border: 1px solid var(--da-line); border-radius: var(--da-radius); background: var(--da-paper);
+  font-size: .875rem; line-height: 1.6; text-align: left; }
+.da-steps ol { margin: .25rem 0 0; padding-left: 1.1rem; }
+noscript .da-steps { display: block; }
+
+.da-footer { padding: 1.25rem 1.25rem 1.5rem; text-align: center; }
+.da-footer p { margin: 0 0 .25rem; color: #8f8f8f; font-size: .8125rem; }
+.da-footer a { color: inherit; }
+.da-footer .da-credit { font-size: .75rem; }
+
+/* ------------------------------------------------------------------ animations (one per visit, see dialnet.js) -- */
+.da-anim { position: relative; display: flex; justify-content: center; align-items: center; min-height: 7.5rem; margin: 0 0 1rem; }
+.da-anim[data-kind="barra"] { min-height: 0; }
+.da-bar { width: 100%; height: 10px; background: var(--da-line); border-radius: 999px; overflow: hidden; }
+.da-bar > div { position: relative; height: 100%; width: 0; background: var(--da-accent); border-radius: inherit; transition: width .25s ease-out, background-color .3s; overflow: hidden; }
+.da-bar > div::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent); transform: translateX(-100%); animation: da-sheen 1.3s ease-in-out infinite; }
+@keyframes da-sheen { to { transform: translateX(100%); } }
+[data-state="done"] .da-bar > div { width: 100% !important; background: var(--da-success); }
+[data-state="error"] .da-bar > div { background: #a8a8a8; }
+[data-state]:not([data-state="working"]) .da-bar > div::after { animation: none; }
+
+.cita { width: 100%; box-sizing: border-box; padding: 1rem 1.25rem 1rem 2.75rem; text-indent: -1.5rem; background: var(--da-paper); border: 1px solid var(--da-line);
+  border-radius: var(--da-radius); font: 400 .9375rem/1.6 Georgia, "Times New Roman", serif; text-align: left; min-height: 5.5rem; }
+.caret { display: inline-block; width: 1px; height: 1em; background: var(--da-ink); vertical-align: -.15em; animation: da-blink 1s steps(1) infinite; }
+@keyframes da-blink { 50% { opacity: 0; } }
+.doi { margin: .5rem 0 0; font: .8125rem ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--da-muted); }
+
+.libro { position: relative; width: 8rem; height: 5.25rem; perspective: 600px; }
+.libro .tapa { position: absolute; top: 0; width: 4rem; height: 5.25rem; background: var(--da-accent); }
+.libro .tapa.i { left: 0; border-radius: 4px 0 0 4px; } .libro .tapa.d { right: 0; border-radius: 0 4px 4px 0; }
+.libro .hoja { position: absolute; left: 4rem; top: .25rem; width: 3.75rem; height: 4.75rem; background: #fff; border: 1px solid var(--da-line-strong); border-radius: 0 3px 3px 0;
+  transform-origin: left center; animation: da-flip 2.4s infinite ease-in-out;
+  background-image: repeating-linear-gradient(#fff 0 .55rem, var(--da-line) .55rem .62rem); background-size: 72% 80%; background-repeat: no-repeat; background-position: .5rem .6rem; }
+.libro .hoja:nth-of-type(4) { animation-delay: .4s; } .libro .hoja:nth-of-type(5) { animation-delay: .8s; }
+@keyframes da-flip { 0%, 10% { transform: rotateY(0); } 55%, 100% { transform: rotateY(-180deg); } }
+[data-state]:not([data-state="working"]) .libro .hoja { animation: none; }
+
+.estante { position: relative; width: 13rem; height: 6rem; }
+.estante .balda { position: absolute; left: 0; right: 0; bottom: 0; height: .5rem; background: #8a6a4a; border-radius: 2px; }
+.estante .lomos { position: absolute; left: .5rem; right: .5rem; bottom: .5rem; display: flex; align-items: flex-end; gap: 3px; }
+.lomo { width: 1.15rem; border-radius: 2px 2px 0 0; opacity: 0; transform: translateY(-2.5rem) rotate(-8deg); transition: opacity .2s, transform .35s cubic-bezier(.3,1.5,.6,1); position: relative; }
+.lomo::after { content: ""; position: absolute; left: 3px; right: 3px; top: 22%; height: 2px; background: rgba(255,255,255,.55); }
+.lomo.on { opacity: 1; transform: none; }
+.lomo.tumbado.on { transform: rotate(-12deg); transform-origin: bottom right; }
+
+.a-col { display: flex; flex-direction: column; align-items: center; gap: .6rem; }
+.bc { position: relative; display: flex; gap: 2px; height: 4rem; padding: 0 .5rem; background: var(--da-paper); border: 1px solid var(--da-line); }
+.bc i { display: block; background: var(--da-ink); }
+.laser { position: absolute; top: -.4rem; bottom: -.4rem; width: 2px; background: #e0342a; left: 0; animation: da-las 1.6s ease-in-out infinite alternate; }
+@keyframes da-las { to { left: calc(100% - 2px); } }
+[data-state]:not([data-state="working"]) .laser { display: none; }
+.isbn { font: .8125rem ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--da-muted); letter-spacing: .05em; }
+[data-state="done"] .isbn { color: var(--da-success); } [data-state="error"] .isbn { color: var(--da-danger); }
+
+.ficha { width: 10rem; background: #fffdf3; border: 1px solid #d9cfb0; border-radius: 2px; font: .75rem ui-monospace, SFMono-Regular, Menlo, monospace; color: #555; text-align: left; }
+.ficha .h { border-bottom: 1px solid #d9cfb0; padding: .35rem .5rem; font-weight: 700; letter-spacing: .08em; color: #7a5a2a; }
+.ficha .r { display: flex; border-bottom: 1px dashed #e6ddc4; height: 1.3rem; align-items: center; padding: 0 .5rem; }
+.ficha .r span { color: #2b4c8c; font-weight: 700; opacity: 0; transform: scale(1.8) rotate(-6deg); transition: opacity .2s, transform .25s cubic-bezier(.3,1.6,.6,1); }
+.ficha .r span.on { opacity: 1; transform: scale(1) rotate(-6deg); }
+.ficha .r span.mal { color: var(--da-danger); }
+
+.rv { display: flex; gap: 1.1rem; align-items: flex-end; }
+.who { display: flex; flex-direction: column; align-items: center; gap: .4rem; }
+.bub { min-width: 2.6rem; height: 1.6rem; padding: 0 .5rem; border-radius: .8rem; background: var(--da-paper); border: 1px solid var(--da-line-strong); display: flex; align-items: center; justify-content: center; font-size: .8rem; color: var(--da-muted); white-space: nowrap; }
+.bub.ok { color: var(--da-success); border-color: var(--da-success); } .bub.ko { color: var(--da-danger); border-color: var(--da-danger); }
+.dots i { display: inline-block; width: 4px; height: 4px; margin: 0 1px; border-radius: 50%; background: #999; animation: da-dt 1s infinite; }
+.dots i:nth-child(2) { animation-delay: .15s; } .dots i:nth-child(3) { animation-delay: .3s; }
+@keyframes da-dt { 0%, 60%, 100% { transform: none; } 30% { transform: translateY(-3px); } }
+.av { width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--da-line); display: flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 600; color: #444; }
+.ms { width: 1.9rem; height: 2.5rem; background: #fff; border: 1px solid var(--da-line-strong); border-radius: 2px; margin-bottom: .3rem; animation: da-pass 2.4s ease-in-out infinite;
+  background-image: repeating-linear-gradient(#fff 0 5px, var(--da-line) 5px 6px); background-size: 70% 80%; background-repeat: no-repeat; background-position: 4px 5px; }
+@keyframes da-pass { 0%, 15% { transform: translateX(-3rem) rotate(-4deg); } 50%, 65% { transform: translateX(3rem) rotate(4deg); } 100% { transform: translateX(-3rem) rotate(-4deg); } }
+[data-state]:not([data-state="working"]) .ms { animation: none; }
+.cap { font-size: .8125rem; color: var(--da-muted); }
+.num { font: 650 2.5rem/1 var(--da-font-display); color: var(--da-accent); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+[data-state="error"] .num { color: #a8a8a8; text-decoration: line-through; }
+
+.sello { position: absolute; right: .5rem; bottom: -.25rem; border: 2px solid var(--da-success); color: var(--da-success); background: rgba(255,255,255,.85);
+  font: 700 .8rem/1 var(--da-font-text); letter-spacing: .1em; padding: .4rem .55rem; border-radius: 3px; opacity: 0; transform: rotate(-12deg) scale(2.2);
+  transition: opacity .2s, transform .3s cubic-bezier(.3,1.6,.6,1); pointer-events: none; }
+[data-state="error"] .sello { border-color: var(--da-danger); color: var(--da-danger); }
+[data-state="done"] .sello, [data-state="error"] .sello { opacity: 1; transform: rotate(-12deg) scale(1); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+@media (max-width: 30rem) {
+  .da-logo img { height: 3rem; } h1#title { font-size: 1.75rem; }
+}

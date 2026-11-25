@@ -12,7 +12,7 @@
   "go_home": "Go home",
   "contact_webmaster": "or if you believe you should not be blocked, please contact the webmaster at",
   "connection_security": "Please wait a moment while we ensure the security of your connection.",
-  "javascript_required": "Sadly, you must enable JavaScript to get past this challenge. This is required because AI companies have changed the social contract around how website hosting works. A no-JS solution is a work-in-progress.",
+  "javascript_required": "To continue, enable JavaScript and allow cookies for this site.",
   "benchmark_requires_js": "Running the benchmark tool requires JavaScript to be enabled.",
   "difficulty": "Difficulty:",
   "algorithm": "Algorithm:",
@@ -40,7 +40,7 @@
   "oh_noes": "Oh noes!",
   "benchmarking_anubis": "Benchmarking Anubis!",
   "you_are_not_a_bot": "You are not a bot!",
-  "making_sure_not_bot": "Making sure you're not a bot!",
+  "making_sure_not_bot": "Checking your browser",
   "celphase": "CELPHASE",
   "js_web_crypto_error": "Your browser doesn't have a functioning web.crypto element. Are you viewing this over a secure context?",
   "js_web_workers_error": "Your browser doesn't support web workers (Anubis uses this to avoid freezing your browser). Do you have a plugin like JShelter installed?",
@@ -60,5 +60,12 @@
   "js_finished_reading": "I've finished reading, continue →",
   "js_calculation_error": "Calculation error!",
   "js_calculation_error_msg": "Failed to calculate challenge:",
-  "script_load_error": "Anubis could not load its JavaScript. The server may be overloaded. Please reload the page to try again."
+  "script_load_error": "Anubis could not load its JavaScript. The server may be overloaded. Please reload the page to try again.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

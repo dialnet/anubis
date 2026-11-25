@@ -76,6 +76,10 @@ const initTranslations = async () => {
   translations = await loadTranslations(currentLang);
 };
 
+// Dialnet: the theme (static/dialnet/dialnet.js) draws its animations from these events
+const emit = (name: string, detail?: unknown) =>
+  document.dispatchEvent(new CustomEvent(`anubis:${name}`, { detail }));
+
 const t = (key: string): string =>
   translations[`js_${key}`] ||
   translations[key] ||
@@ -130,8 +134,9 @@ interface OhNoesParams {
   const ohNoes = ({ titleMsg, statusMsg, imageSrc }: OhNoesParams) => {
     title.innerHTML = titleMsg;
     status.innerHTML = statusMsg;
-    image.src = imageSrc;
+    if (image) image.src = imageSrc;
     progress.style.display = "none";
+    emit("error");
   };
 
   status.innerHTML = t("calculating");
@@ -195,6 +200,7 @@ interface OhNoesParams {
         const probability = Math.pow(1 - likelihood, iters);
         const distance = (1 - Math.pow(probability, 2)) * 100;
         progress.ariaValueNow = `${distance}`;
+        emit("progress", { fraction: distance / 100 });
         if (progress.firstElementChild !== null) {
           (progress.firstElementChild as HTMLElement).style.width =
             `${distance}%`;
@@ -214,25 +220,18 @@ interface OhNoesParams {
 
     await waitForExtensions();
 
+    // Dialnet: show the finished state (stamp, check) for a moment before leaving
+    emit("done");
+    await new Promise((resolve) => setTimeout(resolve, 700));
+
     if (userReadDetails) {
       const container: HTMLDivElement = document.getElementById(
         "progress",
       ) as HTMLDivElement;
 
-      // Style progress bar as a continue button
+      // Dialnet: a continue button styled by the theme
+      container.className = "da-continue";
       container.style.display = "flex";
-      container.style.alignItems = "center";
-      container.style.justifyContent = "center";
-      container.style.height = "2rem";
-      container.style.borderRadius = "1rem";
-      container.style.cursor = "pointer";
-      container.style.background = "#b16286";
-      container.style.color = "white";
-      container.style.fontWeight = "bold";
-      container.style.outline = "4px solid #b16286";
-      container.style.outlineOffset = "2px";
-      container.style.width = "min(20rem, 90%)";
-      container.style.margin = "1rem auto 2rem";
       container.innerHTML = t("finished_reading");
 
       function onDetailsExpand() {

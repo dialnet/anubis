@@ -60,5 +60,12 @@
   "js_finished_reading": "Tôi đã đọc xong, tiếp tục →",
   "js_calculation_error": "Lỗi tính toán!",
   "js_calculation_error_msg": "Không thể tính toán thử thách:",
-  "script_load_error": "Anubis không thể tải JavaScript của mình. Máy chủ có thể đang quá tải. Vui lòng tải lại trang để thử lại."
+  "script_load_error": "Anubis không thể tải JavaScript của mình. Máy chủ có thể đang quá tải. Vui lòng tải lại trang để thử lại.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

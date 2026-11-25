@@ -60,5 +60,12 @@
   "js_calculation_error_msg": "Échec du calcul du défi :",
   "missing_required_forwarded_headers": "En-têtes X-Forwarded-* manquants",
   "simplified_explanation": "Ceci est une mesure contre les robots et les requêtes malveillantes, similaire à un CAPTCHA. Cependant, au lieu d'avoir à faire le travail vous-même, votre navigateur se voit confier une tâche de calcul qu'il doit résoudre pour confirmer qu'il est un client valide. Ce concept est nommé <a href=\"https://en.wikipedia.org/wiki/Proof_of_work\">Preuve de travail</a>. La tâche s'effectue en quelques secondes, puis vous avez accès au site Web. Merci pour votre compréhension et votre patience.",
-  "script_load_error": "Anubis n'a pas réussi à charger son code JavaScript. Le serveur est peut-être surchargé. Veuillez recharger la page pour réessayer."
+  "script_load_error": "Anubis n'a pas réussi à charger son code JavaScript. Le serveur est peut-être surchargé. Veuillez recharger la page pour réessayer.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

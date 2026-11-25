@@ -40,7 +40,7 @@
   "oh_noes": "Oh ez!",
   "benchmarking_anubis": "Anubis egiaztatzen!",
   "you_are_not_a_bot": "Ez zara robota!",
-  "making_sure_not_bot": "Robota ez zarela ziurtatzen!",
+  "making_sure_not_bot": "Zure nabigatzailea egiaztatzen",
   "celphase": "CELPHASE",
   "js_web_crypto_error": "Zure arakatzaileak ez du web.crypto elementu funtzionalik. Testuinguru seguru batean ikusten ari zara hau?",
   "js_web_workers_error": "Zure nabigatzaileak ez ditu web langileak onartzen (Anubisek hau erabiltzen du zure nabigatzailea blokeatzea saihesteko). JShelter bezalako plugin bat instalatuta duzu?",
@@ -60,5 +60,12 @@
   "js_finished_reading": "Irakurtzen amaitu dut, jarraitu →",
   "js_calculation_error": "Kalkulu-errorea!",
   "js_calculation_error_msg": "Huts egin du erronka kalkulatzeak:",
-  "script_load_error": "Anubisek ezin izan du bere JavaScripta kargatu. Zerbitzaria gainkargatuta egon daiteke. Berriro kargatu orria berriro saiatzeko."
+  "script_load_error": "Anubisek ezin izan du bere JavaScripta kargatu. Zerbitzaria gainkargatuta egon daiteke. Berriro kargatu orria berriro saiatzeko.",
+  "dialnet_footer": "Dialnet Fundazioaren zerbitzu bat.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

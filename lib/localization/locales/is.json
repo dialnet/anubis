@@ -60,5 +60,12 @@
   "js_calculation_error_msg": "Mistókst að reikna áskorun:",
   "missing_required_forwarded_headers": "Vantar nauðsynleg X-Forwarded-* hausar",
   "simplified_explanation": "Þetta er ráðstöfun gegn vélmennum og illa meinandi beiðnum, sem virkar svipað og CAPTCHA-mennskupróf. Hins vegar; í stað þess að þurfa að vinna sjálfur, fær vafrinn þinn útreikningsverkefni sem hann þarf að leysa til að tryggja að hann sé gildur biðlari. Þetta hugtak er kallað <a href=\"https://en.wikipedia.org/wiki/Proof_of_work\">Sönnun-á-vinnu</a>. Verkefnið er reiknað á nokkrum sekúndum og þú færð aðgang að vefsíðunni. Takk fyrir skilninginn og þolinmæðina.",
-  "script_load_error": "Anubis gat ekki hlaðið inn JavaScript-kóðanum sínum. Vefþjónninn gæti verið undir of miklu álagi. Endurlestu síðuna til að reyna aftur."
+  "script_load_error": "Anubis gat ekki hlaðið inn JavaScript-kóðanum sínum. Vefþjónninn gæti verið undir of miklu álagi. Endurlestu síðuna til að reyna aftur.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

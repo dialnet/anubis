@@ -60,5 +60,12 @@
   "js_calculation_error_msg": "Impossibile superare il test:",
   "missing_required_forwarded_headers": "Mancano gli header X-Forwarded-* richiesti",
   "simplified_explanation": "Questa è una misura contro bot e richieste dannose simile a un CAPTCHA. Tuttavia, invece di dover lavorare tu stesso, al tuo browser viene assegnato un compito di calcolo che deve risolvere per garantire che sia un client valido. Questo concetto è chiamato <a href=\"https://en.wikipedia.org/wiki/Proof_of_work\">Proof of Work</a>. Il compito viene calcolato in pochi secondi e ti viene concesso l'accesso al sito web. Grazie per la tua comprensione e pazienza.",
-  "script_load_error": "Anubis non è riuscito a caricare il suo JavaScript. Il server potrebbe essere sovraccarico. Ricarica la pagina per riprovare."
+  "script_load_error": "Anubis non è riuscito a caricare il suo JavaScript. Il server potrebbe essere sovraccarico. Ricarica la pagina per riprovare.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

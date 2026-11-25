@@ -60,5 +60,12 @@
   "js_finished_reading": "Приключих с четенето, продължете →",
   "js_calculation_error": "Грешка при изчислението!",
   "js_calculation_error_msg": "Неуспешно изчисление на задачата:",
-  "script_load_error": "Anubis не можа да зареди своя JavaScript. Сървърът може да е претоварен. Моля, презаредете страницата, за да опитате отново."
+  "script_load_error": "Anubis не можа да зареди своя JavaScript. Сървърът може да е претоварен. Моля, презаредете страницата, за да опитате отново.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

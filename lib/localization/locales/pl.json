@@ -60,5 +60,12 @@
   "js_finished_reading": "Skończyłem czytać, kontynuuj →",
   "js_calculation_error": "Błąd obliczeń!",
   "js_calculation_error_msg": "Nie udało się obliczyć zadania:",
-  "script_load_error": "Anubis nie mógł wczytać swojego kodu JavaScript. Serwer może być przeciążony. Odśwież stronę, aby spróbować ponownie."
+  "script_load_error": "Anubis nie mógł wczytać swojego kodu JavaScript. Serwer może być przeciążony. Odśwież stronę, aby spróbować ponownie.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

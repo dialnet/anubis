@@ -58,5 +58,12 @@
   "js_finished_reading": "อ่านจบแล้ว ดำเนินการต่อ →",
   "js_calculation_error": "เกิดข้อผิดพลาดในการคำนวณ!",
   "js_calculation_error_msg": "ไม่สามารถคำนวณการท้าทายได้:",
-  "script_load_error": "Anubis ไม่สามารถโหลด JavaScript ได้ เซิร์ฟเวอร์อาจมีภาระงานหนักเกินไป กรุณาโหลดหน้านี้ใหม่เพื่อลองอีกครั้ง"
+  "script_load_error": "Anubis ไม่สามารถโหลด JavaScript ได้ เซิร์ฟเวอร์อาจมีภาระงานหนักเกินไป กรุณาโหลดหน้านี้ใหม่เพื่อลองอีกครั้ง",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

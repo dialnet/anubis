@@ -8,8 +8,10 @@ import (
 
 templ page(localizer *localization.SimpleLocalizer) {
 	<div class="centered-div">
-		<img id="image" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/pensive.webp?cacheBuster=" + anubis.Version }/>
-		<img style="display:none;" style="width:100%;max-width:256px;" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/img/happy.webp?cacheBuster=" + anubis.Version }/>
+		<p class="da-lead">{ localizer.T("dialnet_lead") }</p>
+		<div class="da-anim" id="da-anim" aria-hidden="true"></div>
+		<p class="da-status" id="da-status" aria-live="polite"></p>
+		<p class="doi" id="da-doi"></p>
 		<p id="status">{ localizer.T("loading") }</p>
 		<p id="anubis-script-error" style="display:none;">{ localizer.T("script_load_error") }</p>
 		<script id="anubis-main" defer type="module" src={ anubis.BasePrefix + "/.within.website/x/cmd/anubis/static/js/main.mjs?cacheBuster=" + anubis.Version }></script>
@@ -18,10 +20,17 @@ templ page(localizer *localization.SimpleLocalizer) {
 			<div class="bar-inner"></div>
 		</div>
 		@challengepage.Explanation(localizer)
+		<div class="da-steps" id="da-steps" hidden>
+			<strong>{ localizer.T("dialnet_steps_title") }</strong>
+			<ol>
+				<li>{ localizer.T("dialnet_step_js") }</li>
+				<li>{ localizer.T("dialnet_step_cookies") }</li>
+				<li>{ localizer.T("dialnet_step_extensions") }</li>
+			</ol>
+			<button type="button" id="da-retry">{ localizer.T("dialnet_retry") }</button>
+		</div>
 		<noscript>
-			<p>
-				{ localizer.T("javascript_required") }
-			</p>
+			<p class="da-steps">{ localizer.T("javascript_required") }</p>
 		</noscript>
 		<div id="testarea"></div>
 	</div>

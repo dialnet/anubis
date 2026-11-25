@@ -1,0 +1,24 @@
+# Dialnet build of Anubis (the "dialnet" theme: static/dialnet + templates). Upstream publishes with ko from GitHub
+# Actions; this reproduces the same assets pipeline (templ, wasm, esbuild, postcss) in one builder.
+#   docker build -f Dockerfile.dialnet --build-arg VERSION=v1.28.2-dialnet.1 -t dialnet-registry.unirioja.es/dialnet/anubis:v1.28.2-dialnet.1 .
+FROM golang:1.27-bookworm AS build
+RUN apt-get update && apt-get install -y --no-install-recommends brotli zstd xz-utils ca-certificates curl \
+    && rm -rf /var/lib/apt/lists/*
+ARG NODE_VERSION=24.15.0
+RUN curl -fsSL "https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.xz" | tar -xJ -C /usr/local --strip-components=1
+RUN curl -fsSL https://sh.rustup.rs | sh -s -- -y --profile minimal --target wasm32-unknown-unknown
+ENV PATH=/root/.cargo/bin:$PATH
+WORKDIR /src
+COPY package.json package-lock.json ./
+# --ignore-scripts: the "prepare" hook (husky, go mod download, cargo fetch) needs the whole tree and .git
+RUN npm ci --ignore-scripts
+COPY . .
+RUN npm run assets
+# the packages the theme touches: templates, translations (every locale needs every key), challenge pages
+RUN go test ./web/... ./lib/localization/... ./lib/challenge/...
+ARG VERSION=devel
+RUN CGO_ENABLED=0 go build -trimpath -buildvcs=false -ldflags "-s -w -X github.com/TecharoHQ/anubis.Version=${VERSION}" -o /anubis ./cmd/anubis
+
+FROM gcr.io/distroless/static-debian12:nonroot
+COPY --from=build /anubis /ko-app/anubis
+ENTRYPOINT ["/ko-app/anubis"]

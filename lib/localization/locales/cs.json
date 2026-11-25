@@ -60,5 +60,12 @@
   "js_calculation_error": "Chyba výpočtu!",
   "js_calculation_error_msg": "Nepodařilo se vypočítat výzvu:",
   "missing_required_forwarded_headers": "Chybějící požadované hlavičky X-Forwarded-*",
-  "script_load_error": "Anubis nemohl načíst svůj JavaScript. Server může být přetížený. Prosím obnovte stránku a zkuste to znovu."
+  "script_load_error": "Anubis nemohl načíst svůj JavaScript. Server může být přetížený. Prosím obnovte stránku a zkuste to znovu.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

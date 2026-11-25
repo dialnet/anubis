@@ -60,5 +60,12 @@
   "js_calculation_error_msg": "チャレンジの計算に失敗しました:",
   "missing_required_forwarded_headers": "必要な X-Forwarded-* ヘッダーがありません",
   "simplified_explanation": "これは、CAPTCHAと同様の、ボットや悪意のあるリクエストに対する対策です。ただし、自分で作業する代わりに、ブラウザに計算タスクが与えられ、それを解決して有効なクライアントであることを確認する必要があります。この概念は<a href=\"https://en.wikipedia.org/wiki/Proof_of_work\">Proof of Work</a>と呼ばれます。タスクは数秒で計算され、ウェブサイトへのアクセスが許可されます。ご理解とご協力をお願いいたします。",
-  "script_load_error": "AnubisのJavaScriptを読み込めませんでした。サーバーが混雑している可能性があります。ページを再読み込みして、もう一度お試しください。"
+  "script_load_error": "AnubisのJavaScriptを読み込めませんでした。サーバーが混雑している可能性があります。ページを再読み込みして、もう一度お試しください。",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

@@ -60,5 +60,12 @@
   "js_calculation_error_msg": "Falha ao calcular a validação:",
   "missing_required_forwarded_headers": "Faltam os cabeçalhos X-Forwarded-* obrigatórios",
   "simplified_explanation": "Esta é uma medida contra bots e solicitações maliciosas, semelhante a um CAPTCHA. No entanto, em vez de você mesmo ter que fazer o trabalho, seu navegador recebe uma tarefa de cálculo que ele deve resolver para garantir que seja um cliente válido. Esse conceito é chamado de <a href=\"https://en.wikipedia.org/wiki/Proof_of_work\">Prova de Trabalho</a>. A tarefa é calculada em poucos segundos e você tem acesso ao site. Obrigado pela sua compreensão e paciência.",
-  "script_load_error": "O Anubis não conseguiu carregar seu JavaScript. O servidor pode estar sobrecarregado. Por favor, recarregue a página para tentar novamente."
+  "script_load_error": "O Anubis não conseguiu carregar seu JavaScript. O servidor pode estar sobrecarregado. Por favor, recarregue a página para tentar novamente.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

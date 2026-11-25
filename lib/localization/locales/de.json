@@ -60,5 +60,12 @@
   "js_finished_reading": "Fertig gelesen, weiter zur Seite →",
   "js_calculation_error": "Berechnungsfehler!",
   "js_calculation_error_msg": "Fehler bei der Berechnung der Prüfung:",
-  "script_load_error": "Anubis konnte sein JavaScript nicht laden. Der Server ist möglicherweise überlastet. Bitte lade die Seite neu, um es erneut zu versuchen."
+  "script_load_error": "Anubis konnte sein JavaScript nicht laden. Der Server ist möglicherweise überlastet. Bitte lade die Seite neu, um es erneut zu versuchen.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }

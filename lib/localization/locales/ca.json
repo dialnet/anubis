@@ -12,7 +12,7 @@
   "go_home": "Vés a l’inici",
   "contact_webmaster": "o si creieu que no hauríeu de rebre un bloqueig, contacteu amb l’administrador del web a",
   "connection_security": "Espereu un moment mentre comprovem la seguretat de la vostra connexió.",
-  "javascript_required": "Malauradament, cal que activeu el JavaScript per a superar aquesta prova. És obligatori perquè les empreses d’IA han canviat el contracte social de com funciona l’allotjament de llocs web. Hi ha en projecte una solució sense JS.",
+  "javascript_required": "Per continuar cal activar JavaScript i permetre les galetes d’aquest lloc.",
   "benchmark_requires_js": "L’execució de l’eina de comparació requereix que el JavaScript estigui activat.",
   "difficulty": "Dificultat:",
   "algorithm": "Algorisme:",
@@ -40,7 +40,7 @@
   "oh_noes": "Oh, no!",
   "benchmarking_anubis": "S’està executant una comparació d’Anubis!",
   "you_are_not_a_bot": "No sou un robot!",
-  "making_sure_not_bot": "Estem comprovant que no sigueu un robot!",
+  "making_sure_not_bot": "Comprovant el teu navegador",
   "celphase": "CELPHASE",
   "js_web_crypto_error": "El vostre navegador no té un element web.crypto funcional. Esteu veient això en un context segur?",
   "js_web_workers_error": "El vostre navegador no admet treballadors web (Anubis els utilitza per a evitar que el vostre navegador es bloquegi). Teniu instal·lat un connector com ara el JShelter?",
@@ -60,5 +60,12 @@
   "js_finished_reading": "Ja he acabat de llegir, continua →",
   "js_calculation_error": "S’ha produït un error de càlcul!",
   "js_calculation_error_msg": "No s’ha pogut calcular la prova:",
-  "script_load_error": "Anubis no ha pogut carregar el seu JavaScript. És possible que el servidor estigui sobrecarregat. Torneu a carregar la pàgina per a tornar-ho a provar."
+  "script_load_error": "Anubis no ha pogut carregar el seu JavaScript. És possible que el servidor estigui sobrecarregat. Torneu a carregar la pàgina per a tornar-ho a provar.",
+  "dialnet_footer": "Un servei de la Fundació Dialnet.",
+  "dialnet_lead": "És una comprovació automàtica per protegir el servei dels robots. Només trigarà uns segons.",
+  "dialnet_steps_title": "Per continuar:",
+  "dialnet_step_js": "Activa JavaScript al navegador.",
+  "dialnet_step_cookies": "Permet les galetes d’aquest lloc.",
+  "dialnet_step_extensions": "Desactiva les extensions que bloquegin scripts i torna-ho a provar.",
+  "dialnet_retry": "Torna-ho a provar"
 }

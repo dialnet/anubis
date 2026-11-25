@@ -60,5 +60,12 @@
   "js_calculation_error_msg": "Не удалось рассчитать задачу:",
   "missing_required_forwarded_headers": "Отсутствуют требуемые заголовки X-Forwarded-*",
   "simplified_explanation": "Это мера против ботов и вредоносных запросов, аналогичная CAPTCHA. Однако вместо того, чтобы вам приходилось работать самостоятельно, вашему браузеру дается задача вычисления, которую он должен решить, чтобы убедиться, что он является действительным клиентом. Эта концепция называется <a href=\"https://en.wikipedia.org/wiki/Proof_of_work\">Доказательство выполнения работы</a>. Задача рассчитывается за несколько секунд, и вам предоставляется доступ к веб-сайту. Спасибо за понимание и терпение.",
-  "script_load_error": "Anubis не смог загрузить свой JavaScript. Возможно, сервер перегружен. Пожалуйста, перезагрузите страницу, чтобы попробовать снова."
+  "script_load_error": "Anubis не смог загрузить свой JavaScript. Возможно, сервер перегружен. Пожалуйста, перезагрузите страницу, чтобы попробовать снова.",
+  "dialnet_footer": "A service of the Dialnet Foundation.",
+  "dialnet_lead": "An automatic check that protects this service from bots. It only takes a few seconds.",
+  "dialnet_steps_title": "To continue:",
+  "dialnet_step_js": "Enable JavaScript in your browser.",
+  "dialnet_step_cookies": "Allow cookies for this site.",
+  "dialnet_step_extensions": "Turn off extensions that block scripts and try again.",
+  "dialnet_retry": "Try again"
 }
